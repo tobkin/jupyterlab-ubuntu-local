@@ -1,6 +1,5 @@
 # jupyterlab-ubuntu-local
 Toby's JupyterLab deployment designed for use on a non-web facing Ubuntu instance.
-Requirements: zsh
 
 # Clone This Repo
 ```
@@ -12,7 +11,6 @@ git clone git@github.com:tobkin/jupyterlab-ubuntu-local.git
 ```
 
 # One-time Setup
-Ensure you have the following packages installed: zsh, python3.11env, pip
 ```
 git pull # Updates this repo
 chmod +x *.sh

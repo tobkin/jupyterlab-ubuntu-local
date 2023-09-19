@@ -18,8 +18,10 @@ fi
 # Check if ~/bin directory exists, create it if not
 if [ ! -d ~/bin ]; then
   mkdir -p ~/bin
-  # Check if the directory already exists in PATH
-  if [[ ":$PATH:" == *":$HOME/bin:"* ]]; then
+fi
+
+# Add ~/bin to PATH in .zshrc
+if [[ ":$PATH:" == *":$HOME/bin:"* ]]; then
     echo "Directory ~/bin is already in PATH."
   else
     # Append the directory to the PATH in the .zshrc file
@@ -27,7 +29,6 @@ if [ ! -d ~/bin ]; then
     echo "Directory $HOME/bin added to PATH in ~/.zshrc"
     # Source the .zshrc file to apply changes immediately
     source ~/.zshrc
- fi
 fi
 
 ln -s "$(pwd)/start-jupyterlab.sh" ~/bin/jupyterlab
