@@ -1,5 +1,6 @@
 # jupyterlab-ubuntu-local
 Toby's JupyterLab deployment designed for use on a non-web facing Ubuntu instance.
+Requirements: zsh
 
 # Clone This Repo
 ```
@@ -11,26 +12,17 @@ git clone git@github.com:tobkin/jupyterlab-ubuntu-local.git
 ```
 
 # One-time Setup
+Ensure you have the following packages installed: zsh, python3.11env, pip
 ```
 git pull # Updates this repo
 chmod +x *.sh
-./create-venv.sh
+./symlink-jupyterlab.sh
 ```
 
 # Running JupyterLab
-First, activate the virtual environment for your terminal session.
-```
-source jupyterlab-venv/bin/activate
-```
+  Set your directory to your jupyter notebook, and run ``jupyterlab``.
 
-Next, change to the directory you want to open in JupyterLab and open JupyterLab
+# Removing JupyterLab
 ```
-cd ~/src
-jupyter lab
-```
-
-# Deactivating the Environment
-You only need to do this if you want to reuse your current terminal session in a different Python virtual environment context. You can also simply close your terminal session and open a new one.
-```
-deactivate
+  rm ~/bin/jupyterlab
 ```
